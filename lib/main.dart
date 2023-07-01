@@ -13,9 +13,11 @@ Future<void> main() async {
     await Permission.storage.request();
   }
 
-  runApp(const ProviderScope(
-    child: MyApp(),
-  ));
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
