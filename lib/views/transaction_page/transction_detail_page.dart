@@ -203,7 +203,7 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
                                         Clipboard.setData(
                                           ClipboardData(
                                               text: transactionModel
-                                                  .trnPaymentReference),
+                                                  .trnPaymentReference!),
                                         ).then((_) {
                                           Dialogs.showSuccessSnackBar('Copied!',
                                               'Rereference Number Copied.');
