@@ -5,7 +5,7 @@ import '../../services/endpoint.dart';
 
 class TransactionsViewModel {
   static Future<List<TransactionsModel>> getTransactions(
-      String query, String filter) async {
+      String? query, String filter) async {
     ApiResponse data = await ApiClient.initialiseGetRequest(
       url: EndPoints.transactions,
     );
@@ -13,7 +13,7 @@ class TransactionsViewModel {
       if (data.isSuccessful) {
         return (data.data as List)
             .where((element) =>
-                element['trnNarration'].contains(query.toLowerCase()))
+                element['trnNarration'].contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -23,7 +23,7 @@ class TransactionsViewModel {
       if (data.isSuccessful) {
         return (data.data as List)
             .where(
-                (element) => element['trnDrCr'].contains(query.toLowerCase()))
+                (element) => element['trnDrCr'].contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -32,7 +32,8 @@ class TransactionsViewModel {
     } else if (filter == 'amount') {
       if (data.isSuccessful) {
         return (data.data as List)
-            .where((element) => element['amount'].contains(query.toLowerCase()))
+            .where(
+                (element) => element['amount'].contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -42,7 +43,7 @@ class TransactionsViewModel {
       if (data.isSuccessful) {
         return (data.data as List)
             .where((element) => element['counterPartyAccountNumber']
-                .contains(query.toLowerCase()))
+                .contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -52,7 +53,7 @@ class TransactionsViewModel {
       if (data.isSuccessful) {
         return (data.data as List)
             .where((element) => element['counterPartyAccountName']
-                .contains(query.toLowerCase()))
+                .contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -62,7 +63,7 @@ class TransactionsViewModel {
       if (data.isSuccessful) {
         return (data.data as List)
             .where((element) => element['trnCounterPartyBankName']
-                .contains(query.toLowerCase()))
+                .contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -80,7 +81,7 @@ class TransactionsViewModel {
   }
 
   static Future<List<TransactionsModel>> getCredit(
-      String query, String filter) async {
+      String? query, String filter) async {
     ApiResponse data = await ApiClient.initialiseGetRequest(
       url: EndPoints.transactions,
     );
@@ -89,7 +90,7 @@ class TransactionsViewModel {
         return (data.data as List)
             .where((element) =>
                 element['trnDrCr'] == 'deposit' &&
-                element['trnNarration'].contains(query.toLowerCase()))
+                element['trnNarration'].contains(query?.toLowerCase() ?? ''))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -100,7 +101,7 @@ class TransactionsViewModel {
         return (data.data as List)
             .where((element) =>
                 element['trnDrCr'] == 'deposit' &&
-                element['amount'].contains(query.toLowerCase()))
+                element['amount'].contains(query?.toLowerCase() ?? ''))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -112,7 +113,7 @@ class TransactionsViewModel {
             .where((element) =>
                 element['trnDrCr'] == 'deposit' &&
                 element['counterPartyAccountName']
-                    .contains(query.toLowerCase()))
+                    .contains(query?.toLowerCase() ?? ''))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -124,7 +125,7 @@ class TransactionsViewModel {
             .where((element) =>
                 element['trnDrCr'] == 'deposit' &&
                 element['counterPartyAccountNumber']
-                    .contains(query.toLowerCase()))
+                    .contains(query?.toLowerCase() ?? ''))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -135,7 +136,8 @@ class TransactionsViewModel {
         return (data.data as List)
             .where((element) =>
                 element['trnDrCr'] == 'deposit' &&
-                element['counterPartyBankName'].contains(query.toLowerCase()))
+                element['counterPartyBankName']
+                    .contains(query?.toLowerCase() ?? ''))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -154,7 +156,7 @@ class TransactionsViewModel {
   }
 
   static Future<List<TransactionsModel>> getDebit(
-      String query, String filter) async {
+      String? query, String filter) async {
     ApiResponse data = await ApiClient.initialiseGetRequest(
       url: EndPoints.transactions,
     );
@@ -165,7 +167,7 @@ class TransactionsViewModel {
             .where((element) =>
                 element['trnDrCr'] == 'withdrawal' ||
                 element['trnDrCr'] == 'invoice' &&
-                    element['trnNarration'].contains(query.toLowerCase()))
+                    element['trnNarration'].contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -177,7 +179,7 @@ class TransactionsViewModel {
             .where((element) =>
                 element['trnDrCr'] == 'withdrawal' ||
                 element['trnDrCr'] == 'invoice' &&
-                    element['amount'].contains(query.toLowerCase()))
+                    element['amount'].contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -190,7 +192,7 @@ class TransactionsViewModel {
                 element['trnDrCr'] == 'withdrawal' ||
                 element['trnDrCr'] == 'invoice' &&
                     element['counterPartyAccountName']
-                        .contains(query.toLowerCase()))
+                        .contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -203,7 +205,7 @@ class TransactionsViewModel {
                 element['trnDrCr'] == 'withdrawal' ||
                 element['trnDrCr'] == 'invoice' &&
                     element['counterPartyAccountNumber']
-                        .contains(query.toLowerCase()))
+                        .contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {
@@ -216,7 +218,7 @@ class TransactionsViewModel {
                 element['trnDrCr'] == 'withdrawal' ||
                 element['trnDrCr'] == 'invoice' &&
                     element['counterPartyBankName']
-                        .contains(query.toLowerCase()))
+                        .contains(query?.toLowerCase()))
             .map((e) => TransactionsModel.fromJson(e))
             .toList();
       } else {

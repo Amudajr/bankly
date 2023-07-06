@@ -100,9 +100,11 @@ class TransactionPageState extends ConsumerState<TransactionPage> {
                 child: InputFormField(
                   hintText: 'Search',
                   onChanged: (val) {
-                    setState(() {
-                      query = val;
-                    });
+                    if (val != '' || val.isNotEmpty) {
+                      setState(() {
+                        query = val;
+                      });
+                    }
                   },
                   prefixIcon: const Icon(Icons.search, color: PRIMARY),
                   suffixIcon: Padding(
