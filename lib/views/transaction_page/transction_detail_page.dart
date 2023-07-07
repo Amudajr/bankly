@@ -435,7 +435,6 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
     final imagePath = await File('${directory.path}/image.png').create();
     await imagePath.writeAsBytes(pngBytes);
 
-    // await Share.shareFiles([imagePath.path]);
     Dialogs.showNoticeSnackBar('Hurray!', "Receipt downloaded");
   }
 }

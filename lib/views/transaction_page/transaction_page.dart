@@ -53,8 +53,8 @@ class TransactionPageState extends ConsumerState<TransactionPage> {
           child: Row(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * .1,
-                width: MediaQuery.of(context).size.width * .1,
+                height: MediaQuery.sizeOf(context).height * .1,
+                width: MediaQuery.sizeOf(context).width * .1,
                 padding: const EdgeInsets.all(12),
                 decoration: const BoxDecoration(
                   color: BACK_BUTTON_COLOR,
