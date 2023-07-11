@@ -434,7 +434,6 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
     final directory = await getApplicationDocumentsDirectory();
     final imagePath = await File('${directory.path}/image.png').create();
     await imagePath.writeAsBytes(pngBytes);
-
     Dialogs.showNoticeSnackBar('Hurray!', "Receipt downloaded");
   }
 }
