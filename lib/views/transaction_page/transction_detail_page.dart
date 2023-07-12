@@ -430,7 +430,6 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
         await image.toByteData(format: ui.ImageByteFormat.png);
 
     final Uint8List pngBytes = byteData!.buffer.asUint8List();
-
     final directory = await getApplicationDocumentsDirectory();
     final imagePath = await File('${directory.path}/image.png').create();
     await imagePath.writeAsBytes(pngBytes);
