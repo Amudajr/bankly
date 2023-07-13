@@ -425,10 +425,8 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
     RenderRepaintBoundary boundary =
         _repaintKey.currentContext?.findRenderObject() as RenderRepaintBoundary;
     final ui.Image image = await boundary.toImage();
-
     final ByteData? byteData =
         await image.toByteData(format: ui.ImageByteFormat.png);
-
     final Uint8List pngBytes = byteData!.buffer.asUint8List();
     final directory = await getApplicationDocumentsDirectory();
     final imagePath = await File('${directory.path}/image.png').create();
