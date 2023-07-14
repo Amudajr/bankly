@@ -417,7 +417,7 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
       }
     } catch (err) {
       debugPrint("Cannot get download folder path: $err");
-      return '';
+      throw Exception();
     }
   }
 
