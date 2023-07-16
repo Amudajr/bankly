@@ -313,7 +313,6 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
                             ],
                           ),
                           const Divider(
-                            thickness: 1,
                             height: 25,
                             color: GREY,
                           ),
