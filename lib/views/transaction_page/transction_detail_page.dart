@@ -243,10 +243,7 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
                               ),
                             ],
                           ),
-                          const Divider(
-                            height: 25,
-                            color: GREY,
-                          ),
+                          const Divider(height: 25, color: GREY),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
