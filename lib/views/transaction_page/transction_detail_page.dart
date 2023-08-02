@@ -18,7 +18,6 @@ import '../../utils/app_widgets.dart';
 import '../../utils/currency_format.dart';
 import '../../utils/img_res.dart';
 import '../../utils/theme.dart';
-
 import 'dart:ui' as ui;
 
 class TransactionDetailPage extends StatefulWidget {
