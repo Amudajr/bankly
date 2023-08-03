@@ -40,10 +40,7 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(
-          0,
-          MediaQuery.of(context).size.height * .11,
-        ),
+        preferredSize: Size(0, MediaQuery.of(context).size.height * .11),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Row(
