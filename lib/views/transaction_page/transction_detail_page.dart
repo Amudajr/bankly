@@ -12,7 +12,6 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
-
 import '../../models/transactions_model.dart';
 import '../../utils/app_widgets.dart';
 import '../../utils/currency_format.dart';
