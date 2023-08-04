@@ -195,11 +195,10 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
                                   5.pw,
                                   InkResponse(
                                     onTap: () {
-                                      Clipboard.setData(
-                                        ClipboardData(
-                                            text: transactionModel
-                                                .trnPaymentReference!),
-                                      ).then((_) {
+                                      Clipboard.setData(ClipboardData(
+                                              text: transactionModel
+                                                  .trnPaymentReference!))
+                                          .then((_) {
                                         Dialogs.showSuccessSnackBar('Copied!',
                                             'Rereference Number Copied.');
                                       });
