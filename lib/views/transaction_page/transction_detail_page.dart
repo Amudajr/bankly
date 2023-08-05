@@ -130,11 +130,7 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
                               color: BLACK,
                             ),
                           ),
-                          const Divider(
-                            thickness: 1,
-                            height: 25,
-                            color: GREY,
-                          ),
+                          const Divider(thickness: 1, height: 25, color: GREY),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
