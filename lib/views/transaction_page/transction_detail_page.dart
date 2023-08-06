@@ -109,13 +109,12 @@ class _TransactionDetailPageState extends State<TransactionDetailPage> {
                             child: Text(
                               'N${formatCurrency(transactionModel.trnAmount, '')}',
                               style: TextStyle(
-                                fontSize: Theme.of(context)
-                                    .textTheme
-                                    .headlineMedium
-                                    ?.fontSize,
-                                fontWeight: FontWeight.w700,
-                                color: BLACK,
-                              ),
+                                  fontSize: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium
+                                      ?.fontSize,
+                                  fontWeight: FontWeight.w700,
+                                  color: BLACK),
                             ),
                           ),
                           30.ph,
