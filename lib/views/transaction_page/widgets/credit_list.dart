@@ -92,10 +92,7 @@ class CreditTransactionsCard extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (context, index) => Divider(
-                  height: 30,
-                  color: GREY.withOpacity(0.2),
-                  thickness: 1,
-                ),
+                    height: 30, color: GREY.withOpacity(0.2), thickness: 1),
                 itemCount: snapshot.data!.length,
               );
             } else if (snapshot.data!.isEmpty || snapshot.data == null) {
