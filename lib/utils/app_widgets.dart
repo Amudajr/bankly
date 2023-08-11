@@ -103,8 +103,13 @@ outlineButton(
 primaryTextButton({onClick, text, color, fontSize}) {
   return TextButton(
     onPressed: onClick,
-    child: Text(text ?? '',
-        style: TextStyle(color: color ?? PRIMARY, fontSize: fontSize ?? 14.0)),
+    child: Text(
+      text ?? '',
+      style: TextStyle(
+        color: color ?? PRIMARY,
+        fontSize: fontSize ?? 14.0,
+      ),
+    ),
   );
 }
 
