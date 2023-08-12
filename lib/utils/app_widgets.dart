@@ -121,8 +121,9 @@ bubbleSplash() {
         width: 650,
         height: 700,
         decoration: BoxDecoration(
-            border: Border.all(color: WHITE, width: 20),
-            shape: BoxShape.circle),
+          border: Border.all(color: WHITE, width: 20),
+          shape: BoxShape.circle,
+        ),
       ),
       Container(
         width: 550,
