@@ -53,10 +53,7 @@ Widget primaryButton(
                   icon ?? Icons.arrow_drop_down,
                   color: iconColor ?? Colors.white,
                 ),
-              if (hasIcon)
-                const SizedBox(
-                  width: 5,
-                ),
+              if (hasIcon) const SizedBox(width: 5),
               Text(
                 text ?? '',
                 overflow: TextOverflow.ellipsis,
