@@ -5,8 +5,6 @@ import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 class InternetUtils {
-  // static UserController userController = Get.put(UserController());
-
   static const Duration _CONNECTIVITY_TIMEOUT = Duration(seconds: 5);
 
   static Future<bool> checkConnectivity() async {
