@@ -9,7 +9,6 @@ class ApiStatus {
   }
 
   static handleError(http.Response response) {
-    // print('error: ${response.body} - ${response.statusCode}');
     switch (response.statusCode) {
       case 400:
         throw ('${jsonDecode(response.body)['detail'] ?? 'Unknown Error'}');
