@@ -24,6 +24,7 @@ class ApiStatus {
 
       case 500:
         throw 'Our system just hit a snag, kindly try again as we keep looking into it';
+
       default:
         throw 'Our system just hit a snag, kindly try again as we keep looking into it';
     }
