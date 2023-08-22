@@ -17,20 +17,21 @@ double height(BuildContext context) {
   return MediaQuery.of(context).size.height;
 }
 
-Widget primaryButton(
-        {onClick,
-        color,
-        text,
-        textColor = WHITE,
-        context,
-        hPadding,
-        vPadding,
-        myKey,
-        hasIcon = false,
-        iconColor,
-        icon,
-        fontSize,
-        width}) =>
+Widget primaryButton({
+  onClick,
+  color,
+  text,
+  textColor = WHITE,
+  context,
+  hPadding,
+  vPadding,
+  myKey,
+  hasIcon = false,
+  iconColor,
+  icon,
+  fontSize,
+  width,
+}) =>
     InkWell(
       key: Key(myKey ?? ''),
       onTap: onClick,
