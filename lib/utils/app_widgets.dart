@@ -30,7 +30,7 @@ Widget primaryButton({
   iconColor,
   icon,
   fontSize,
-  width,
+  width
 }) =>
     InkWell(
       key: Key(myKey ?? ''),
