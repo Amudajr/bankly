@@ -168,17 +168,18 @@ Widget defaultAppBar(text, {goBack, onTap}) {
 
 Widget backButton({goBack}) {
   return InkWell(
-      onTap: () {
-        Get.back();
-      },
-      child: const Padding(
-        padding: EdgeInsets.all(10),
-        child: Icon(
-          Icons.arrow_back_ios,
-          color: BLACK,
-          size: 20,
-        ),
-      ));
+    onTap: () {
+      Get.back();
+    },
+    child: const Padding(
+      padding: EdgeInsets.all(10),
+      child: Icon(
+        Icons.arrow_back_ios,
+        color: BLACK,
+        size: 20,
+      ),
+    ),
+  );
 }
 
 class Dialogs {
