@@ -184,16 +184,19 @@ Widget backButton({goBack}) {
 
 class Dialogs {
   static showErrorSnackBar(String title, String message) {
-    Get.snackbar(title, message,
-        icon: const Icon(
-          Icons.error_outlined,
-          color: WHITE,
-        ),
-        borderRadius: 15,
-        margin: const EdgeInsets.symmetric(horizontal: 30),
-        backgroundColor: ACCENT_RED.withOpacity(0.5),
-        colorText: WHITE,
-        duration: const Duration(seconds: 5));
+    Get.snackbar(
+      title,
+      message,
+      icon: const Icon(
+        Icons.error_outlined,
+        color: WHITE,
+      ),
+      borderRadius: 15,
+      margin: const EdgeInsets.symmetric(horizontal: 30),
+      backgroundColor: ACCENT_RED.withOpacity(0.5),
+      colorText: WHITE,
+      duration: const Duration(seconds: 5),
+    );
   }
 
   static showSuccessSnackBar(String title, String message) {
