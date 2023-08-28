@@ -200,16 +200,19 @@ class Dialogs {
   }
 
   static showSuccessSnackBar(String title, String message) {
-    Get.snackbar(title, message,
-        duration: const Duration(seconds: 5),
-        icon: const Icon(
-          Icons.check_circle,
-          color: WHITE,
-        ),
-        borderRadius: 15,
-        margin: const EdgeInsets.symmetric(horizontal: 30),
-        backgroundColor: GREEN.withOpacity(0.5),
-        colorText: WHITE);
+    Get.snackbar(
+      title,
+      message,
+      duration: const Duration(seconds: 5),
+      icon: const Icon(
+        Icons.check_circle,
+        color: WHITE,
+      ),
+      borderRadius: 15,
+      margin: const EdgeInsets.symmetric(horizontal: 30),
+      backgroundColor: GREEN.withOpacity(0.5),
+      colorText: WHITE,
+    );
   }
 
   static showNoticeSnackBar(String title, String message) {
