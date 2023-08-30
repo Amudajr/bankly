@@ -260,8 +260,9 @@ class _SpinKitPumpingHeartState extends State<SpinKitPumpingHeart>
     _controller = AnimationController(vsync: this, duration: widget.duration)
       ..repeat();
     _animation = Tween(begin: 1.0, end: 1.25).animate(CurvedAnimation(
-        parent: _controller,
-        curve: const Interval(0.0, 1.0, curve: SpinKitPumpCurve())));
+      parent: _controller,
+      curve: const Interval(0.0, 1.0, curve: SpinKitPumpCurve()),
+    ));
   }
 
   @override
