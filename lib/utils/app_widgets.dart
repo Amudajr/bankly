@@ -283,9 +283,6 @@ class _SpinKitPumpingHeartState extends State<SpinKitPumpingHeart>
   }
 
   Widget _itemBuilder(int index) =>
-      // widget.itemBuilder != null
-      // ? widget.itemBuilder(context, index)
-      // :
       Image.asset('assets/images/app_icon_primary.png',
           color: PRIMARY, height: 45);
 }
