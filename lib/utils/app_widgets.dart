@@ -282,9 +282,11 @@ class _SpinKitPumpingHeartState extends State<SpinKitPumpingHeart>
     return ScaleTransition(scale: _animation, child: _itemBuilder(0));
   }
 
-  Widget _itemBuilder(int index) =>
-      Image.asset('assets/images/app_icon_primary.png',
-          color: PRIMARY, height: 45);
+  Widget _itemBuilder(int index) => Image.asset(
+        'assets/images/app_icon_primary.png',
+        color: PRIMARY,
+        height: 45,
+      );
 }
 
 class SpinKitPumpCurve extends Curve {
