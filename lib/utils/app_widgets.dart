@@ -228,17 +228,6 @@ class Dialogs {
   }
 }
 
-// Future<void> showSendingData(context, {text}) async {
-//   return showDialog(
-//       barrierDismissible: false,
-//       context: context,
-//       builder: (context) {
-//         return const CustomLoader(
-//           color: PRIMARY,
-//         );
-//       });
-// }
-
 class SpinKitPumpingHeart extends StatefulWidget {
   Duration duration = const Duration(milliseconds: 2400);
 
