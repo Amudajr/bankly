@@ -42,7 +42,9 @@ Widget primaryButton(
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: hPadding ?? 10.0, vertical: vPadding ?? 17.0),
+            horizontal: hPadding ?? 10.0,
+            vertical: vPadding ?? 17.0,
+          ),
           child: Center(
               child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
