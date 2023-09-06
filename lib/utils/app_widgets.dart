@@ -155,7 +155,10 @@ Widget defaultAppBar(text, {goBack, onTap}) {
       Text(
         text,
         style: const TextStyle(
-            fontSize: 25, letterSpacing: 0.7, fontWeight: FontWeight.w500),
+          fontSize: 25,
+          letterSpacing: 0.7,
+          fontWeight: FontWeight.w500,
+        ),
         textAlign: TextAlign.center,
       ),
       const SizedBox(width: 35),
