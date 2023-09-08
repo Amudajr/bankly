@@ -35,7 +35,7 @@ class ApiClient {
   static Future<ApiResponse> initialiseDeleteRequest({data, url, token}) async {
     if (await InternetUtils.checkConnectivity()) {
       try {
-        debugPrint('$url');
+        // debugPrint('$url');
         debugPrint('$data');
         var response =
             await ClientRepository.makeDeleteRequest(apiUrl: url, token: token);
