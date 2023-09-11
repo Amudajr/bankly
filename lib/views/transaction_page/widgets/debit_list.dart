@@ -7,7 +7,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:shimmer/shimmer.dart';
-
 import '../../../utils/currency_format.dart';
 import '../../../utils/theme.dart';
 import '../transction_detail_page.dart';
