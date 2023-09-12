@@ -100,7 +100,7 @@ class DebitTransactionsCard extends StatelessWidget {
             } else if (snapshot.data!.isEmpty || snapshot.data == null) {
               return Center(
                 child: Text(
-                  'No Transaction Found',
+                  'No Transaction Found Yet',
                   style: TextStyle(
                     fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
                     fontWeight: FontWeight.w500,
