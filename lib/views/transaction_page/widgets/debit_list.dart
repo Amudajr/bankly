@@ -121,7 +121,7 @@ class DebitTransactionsCard extends StatelessWidget {
           } else {
             return Center(
               child: Text(
-                'Error Fetching Transactions',
+                'Error Fetching Transaction',
                 style: TextStyle(
                   fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
                   fontWeight: FontWeight.w500,
