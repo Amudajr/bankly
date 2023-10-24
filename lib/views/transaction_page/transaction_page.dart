@@ -98,7 +98,7 @@ class TransactionPageState extends ConsumerState<TransactionPage> {
             Card(
               child: Center(
                 child: InputFormField(
-                  hintText: 'Sssearch',
+                  hintText: 'Ssearch',
                   onChanged: (val) {
                     if (val != '' || val.isNotEmpty) {
                       setState(() {
