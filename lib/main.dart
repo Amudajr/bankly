@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Bankly',
+      title: 'Banklyy',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'SF',
